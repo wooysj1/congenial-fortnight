@@ -43,7 +43,9 @@ def generate(n_samples=1000, random_state=42, out_path="synthetic_data.csv"):
 if __name__ == "__main__":
     import argparse
 
-    parser = argparse.ArgumentParser(description="Generate synthetic credit data")
+    parser = argparse.ArgumentParser(
+        description="Generate synthetic credit data"
+    )
     parser.add_argument("--samples", type=int, default=1000)
     parser.add_argument("--out", default="synthetic_data.csv")
     args = parser.parse_args()

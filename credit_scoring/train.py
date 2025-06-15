@@ -11,7 +11,9 @@ def main(data_path, model_out='credit_model.pkl'):
     X = data.drop('target', axis=1)
     y = data['target']
 
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.2, random_state=42
+    )
     model = train_model(X_train, y_train)
 
     preds = model.predict(X_test)
